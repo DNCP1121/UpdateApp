@@ -1,0 +1,90 @@
+/*
+ * CommDef.h
+ *
+ *  Created on: 2016-2-15
+ *      Author: guoxs
+ */
+
+#ifndef _COMMDEF_H_
+#define _COMMDEF_H_
+
+#include <unistd.h>
+#include <asm/termbits.h>
+
+
+#define JAVA_CTRL_BT_CMD_NULL					-1
+#define JAVA_CTRL_BT_CMD_INIT 					0
+#define JAVA_CTRL_BT_CMD_ONOFF 					1
+#define JAVA_CTRL_BT_CMD_AUTOCONNECT			2
+#define JAVA_CTRL_BT_CMD_DISCONNECT				3
+#define JAVA_CTRL_BT_CMD_CONNECT				4
+#define JAVA_CTRL_BT_CMD_DIAL					5
+#define JAVA_CTRL_BT_CMD_ANSWER					6
+#define JAVA_CTRL_BT_CMD_HANGUP					7
+#define JAVA_CTRL_BT_CMD_DIAL_KEYNUM			8
+#define JAVA_CTRL_BT_CMD_SET_RING_MUTE			9
+#define JAVA_CTRL_BT_CMD_SET_MIC_TO_CAR			10
+#define JAVA_CTRL_BT_CMD_SET_MIC_MUTE			11
+#define JAVA_CTRL_BT_CMD_MODIFY_NAME			12
+#define JAVA_CTRL_BT_CMD_MODIFY_PIN				13
+#define JAVA_CTRL_BT_CMD_PLAY_RING				14
+#define JAVA_CTRL_BT_CMD_DOWNLOAD_PB			15
+#define JAVA_CTRL_BT_CMD_SCAN_DEVICE			16
+#define JAVA_CTRL_BT_CMD_STOP_SCAN				17
+#define JAVA_CTRL_BT_CMD_DEL_MATCH_DEVICE		18
+#define JAVA_CTRL_BT_CMD_MUSIC_NEXT				19
+#define JAVA_CTRL_BT_CMD_MUSIC_PREV				20
+#define JAVA_CTRL_BT_CMD_MUSIC_PLAY				21
+#define JAVA_CTRL_BT_CMD_MUSIC_PAUSE			22
+#define JAVA_CTRL_BT_CMD_SET_MUSIC_MUTE			23
+
+
+#define C_CALL_BACK_CMD_CONNECTING				0
+#define C_CALL_BACK_CMD_CONNECTED				1
+#define C_CALL_BACK_CMD_DISCONNECT				2
+#define C_CALL_BACK_CMD_SET_NAME_AND_PIN		3
+#define C_CALL_BACK_CMD_COMING					4
+#define C_CALL_BACK_CMD_OUTING					5
+#define C_CALL_BACK_CMD_TALKING					6
+#define C_CALL_BACK_CMD_HANGUP					7
+#define C_CALL_BACK_CMD_SET_MIC_TO_CAR			8
+#define C_CALL_BACK_CMD_SET_MIC_MUTE			9
+#define C_CALL_BACK_CMD_PB_DOWNLOAD_STATE		10
+#define C_CALL_BACK_CMD_PB_DOWNLOAD_INFO		11
+#define C_CALL_BACK_CMD_CR_DOWNLOAD_STATE		12
+#define C_CALL_BACK_CMD_CR_DOWNLOAD_INFO		13
+#define C_CALL_BACK_CMD_SCAN_DEVICE_INFO		14
+#define C_CALL_BACK_CMD_SET_MUSIC_MUTE			15
+#define C_CALL_BACK_CMD_SET_MUSIC_ID3			16
+#define C_CALL_BACK_CMD_SET_SESSION_ID			17
+#define C_CALL_BACK_CMD_SET_MUSIC_STATE			18
+
+
+#define SYSTEM_PROPERTY_BT_NAME		"ro.kernel.android.bt"
+#define UART_DEFAULT_NAME			"ttyS5"
+#define UART_BAUDRATE				B9600
+#define UART_DATA_BUF_LEN			1024
+
+#define UART_ZH_DEV					"/dev/zh_dev"
+#define OS_CTRL_BT_ONOFF			0x6010
+
+#define BT_NAME_MAX_LEN				30
+#define BT_PIN_MAX_LEN				30
+#define BT_MUSIC_ID3_ITEM_MAX_LEN	50
+#define BT_SEARCH_NAME_MAX_LEN		100
+#define BT_SEARCH_ADDR_MAX_LEN		13
+#define BT_PHONE_BOOK_NAME_MAX_LEN	50
+#define BT_PHONE_BOOK_NUM_MAX_LEN	50
+#define BT_CALL_RECORD_NAME_MAX_LEN	50
+#define BT_CALL_RECORD_NUM_MAX_LEN	50
+#define BT_TALKING_NUM_MAX_LEN		50
+#define BT_JSON_INFO_MAX_LEN		260
+
+#define Sleep(x)	usleep(1000*x);
+#define MIN(x, y)	((x < y)? x: y)
+
+typedef unsigned char	BYTE;
+typedef unsigned int	UINT;
+
+
+#endif /* _COMMDEF_H_ */
